@@ -7,6 +7,9 @@ using System.Xml.Serialization;
 
 namespace ARPClientApplication.ARPMessageEAV
 {
+    /// <summary>
+    /// Сообщение о действии - изменение переменной (текстовый ввод, изменение выбора списка и т.д.)
+    /// </summary>
     [Serializable]
     public class A
     {
@@ -23,6 +26,9 @@ namespace ARPClientApplication.ARPMessageEAV
 }
 namespace ARPClientApplication.ARPMessageEAA
 {
+    /// <summary>
+    /// Сообщение о действии - нажатии кнопки, двойном щелчке по списку и т.д.
+    /// </summary>
     [Serializable]
     public class A
     {
@@ -39,6 +45,9 @@ namespace ARPClientApplication.ARPMessageEAA
 }
 namespace ARPClientApplication.ARPMessageEAG
 {
+    /// <summary>
+    /// Сообщение о действии - генерации документов
+    /// </summary>
     [Serializable]
     public class A
     {

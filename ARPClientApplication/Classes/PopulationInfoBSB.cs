@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ARPClientApplication.Graphica
 {
+    /// <summary>
+    /// Класс для формирования графиков
+    /// </summary>
     [Serializable]
     public class PopulationInfoBSB
     {

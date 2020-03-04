@@ -27,12 +27,31 @@ using SVM.Documents.RTF;
 
 namespace ARPClientApplication.Interface
 {
+    /// <summary>
+    /// Класс выполнения инструкций, полученных от службы передачи данных
+    /// </summary>
     public static class IEx
     {
+        /// <summary>
+        /// Путь сохранения файлов
+        /// </summary>
         public static string FileSavingPath { get; set; }
+        /// <summary>
+        /// Документ RTF (в основном, применяется для преобразования текста Unicode)
+        /// </summary>
         public static RTFDocument rTFDocument { get; set; }
+        /// <summary>
+        /// Обработчик события изменения выбора формы (устанавливается для конкретного окна)
+        /// </summary>
         public static RoutedEventHandler DelLviSelected { get; set; }
+        /// <summary>
+        /// Текущее окно
+        /// </summary>
         public static System.Windows.Window window { get; set; }
+        /// <summary>
+        /// Выполнить инструкции
+        /// </summary>
+        /// <param name="r">Ответ службы передачи данных</param>
         public static void ExecuteInstructions(R r)
         {
             foreach (I ins in r.Instructions)
@@ -40,6 +59,10 @@ namespace ARPClientApplication.Interface
                 ExecuteInstruction(ins);
             }
         }
+        /// <summary>
+        /// Выполнить инструкцию
+        /// </summary>
+        /// <param name="i">инструкция</param>
         public static void ExecuteInstruction(I i)
         {
             switch (i.N)
@@ -52,6 +75,9 @@ namespace ARPClientApplication.Interface
                     break;
             }
         }
+        /// <summary>
+        /// Инструкция перехода к клавному окну (от окна входа)
+        /// </summary>
         private static void NewWin()
         {
             MainWindow mainWindow = new MainWindow();
@@ -59,6 +85,10 @@ namespace ARPClientApplication.Interface
             window.Close();
             window = mainWindow;
         }
+        /// <summary>
+        /// Выполнение инструкций, обращающихся к именованным элементам управления
+        /// </summary>
+        /// <param name="ins">Инструкция</param>
         private static void ExecNamedElementInstruction(I ins)
         {
             switch (ins.A)

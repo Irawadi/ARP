@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace ARPClientApplication
 {
+    /// <summary>
+    /// Класс-оболочка для асинхронной проверки соединения со службой
+    /// </summary>
     public class Connectometer
     {
         private BackgroundWorker worker;

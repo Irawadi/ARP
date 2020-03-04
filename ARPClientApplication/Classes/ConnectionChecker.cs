@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace ARPClientApplication
 {
+    //Класс проверки соединения со службой передачи данных
     public static class ConnectionChecker
     {
+        //Строковый идентификатор рабочей станции - идентификатор процессора и идентификатор диска C:
         private static string computerStringId = "";
         public static string ComputerStringId { get { return computerStringId; } }
         public static void SetComputerStringId()

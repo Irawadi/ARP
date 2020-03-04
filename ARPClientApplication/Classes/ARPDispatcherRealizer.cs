@@ -13,14 +13,19 @@ using System.Xml.Serialization;
 
 namespace ARPClientApplication
 {
+    /// <summary>
+    /// Класс реализации обработчиков событий
+    /// </summary>
     public static class ARPDispatcherRealizer
     {
+        // Нажатие кнопки        
         public static void ARPButtonClick(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender; string n = b.Name; string ev = "Click";
             string result = ReportEvent(n, ev);
             ExecuteInterfaceActions(result);
         }
+        // Нажатие радиокнопки
         public static async void ARPRadioButtonClick(object sender, RoutedEventArgs e)
         {
             RadioButton rb = (RadioButton)sender; string n = rb.GroupName; string v = rb.Content.ToString();
@@ -29,6 +34,7 @@ namespace ARPClientApplication
                 WriteSessionVariable(n, v);
             });
         }
+        //Изменение текста
         public static async void ARPTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox t = (TextBox)sender; string n = t.Name; string v = t.Text;
@@ -37,6 +43,7 @@ namespace ARPClientApplication
                 WriteSessionVariable(n, v);
             });
         }
+        //Изменение текста пароля
         public static async void ARPPasswordBoxPasswordChanged(object sender, RoutedEventArgs e)
         {
             PasswordBox p = (PasswordBox)sender; string n = p.Name; string v = ASAEncoder.Encrypt(p.Password);
@@ -45,6 +52,7 @@ namespace ARPClientApplication
                 WriteSessionVariable(n, v);
             });
         }
+        //Изменение выбора в списке
         public static void ARPListViewSelectionChanged(object sender, RoutedEventArgs e)
         {
             ListView l = (ListView)sender; string n = l.Name; string v = l.SelectedIndex.ToString();
@@ -52,6 +60,7 @@ namespace ARPClientApplication
             string result = ReportEvent(n, "SelectionChanged");
             ExecuteInterfaceActions(result);
         }
+        //Изменение выбора даты
         public static async void ARPDatePickerSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DatePicker d = (DatePicker)sender; string n = d.Name; string v = d.Text;
@@ -60,6 +69,7 @@ namespace ARPClientApplication
                 WriteSessionVariable(n, v);
             });
         }
+        //Запись переменной сессии
         public static void WriteSessionVariable(string n, string v)
         {
             string query;
@@ -71,7 +81,7 @@ namespace ARPClientApplication
                 using (XmlWriter writer = XmlWriter.Create(sww))
                 {
                     xsSubmit.Serialize(writer, a);
-                    query = sww.ToString(); // Your XML
+                    query = sww.ToString(); 
                 }
             }
             try
@@ -86,6 +96,7 @@ namespace ARPClientApplication
                 result = "Nothing";
             }
         }
+        //Сообщение о событии
         public static string ReportEvent(string n, string ev)
         {
             string query;
@@ -97,7 +108,7 @@ namespace ARPClientApplication
                 using (XmlWriter writer = XmlWriter.Create(sww))
                 {
                     xsSubmit.Serialize(writer, a);
-                    query = sww.ToString(); // Your XML
+                    query = sww.ToString(); 
                 }
             }
             try
@@ -113,6 +124,7 @@ namespace ARPClientApplication
             }
             return result;
         }
+        //Выполнение действий, касающихся обновления интерфейса
         public static void ExecuteInterfaceActions(string result)
         {
             try

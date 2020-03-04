@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ARPClientApplication.ARPGenerated
 {
+    //Класс для сериализации документа (rtf)
     [Serializable]
     public class Document
     {

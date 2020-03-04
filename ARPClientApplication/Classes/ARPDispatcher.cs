@@ -11,8 +11,18 @@ using System.Windows.Media;
 
 namespace ARPClientApplication
 {
+    /// <summary>
+    /// Класс назначения обработчиков событий
+    /// </summary>
     public static class ARPDispatcher
     {
+        #region Поиск элементов
+        /// <summary>
+        /// Извлечение списка элементов управления определённого типа
+        /// </summary>
+        /// <typeparam name="T">тип элемента управления</typeparam>
+        /// <param name="depObj">объект, в котором ищем</param>
+        /// <returns></returns>
         private static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
             if (depObj != null)
@@ -128,6 +138,8 @@ namespace ARPClientApplication
             }
             return basicColumn;
         }
+        #endregion
+        #region Назначения обработчиков событий (TODO: унифицировать)
         public static void SetDatePickersLanguage(DependencyObject depObj)
         {
             CultureInfo cultureInfo = new CultureInfo("ru-RU");
@@ -144,5 +156,6 @@ namespace ARPClientApplication
         public static void AssignEHPasswordBoxPasswordChanged(DependencyObject depObj, RoutedEventHandler del) { foreach (PasswordBox p in FindVisualChildren<PasswordBox>(depObj)) { p.PasswordChanged += del; } }
         public static void AssignEHListViewSelectionChanged(DependencyObject depObj, SelectionChangedEventHandler del) { foreach (ListView l in FindVisualChildren<ListView>(depObj)) { l.SelectionChanged += del; } }
         public static void AssignEHDatePickerSelectedDateChanged(DependencyObject depObj, EventHandler<SelectionChangedEventArgs> del) { foreach (DatePicker d in FindVisualChildren<DatePicker>(depObj)) { d.SelectedDateChanged += del; } }
+        #endregion
     }
 }

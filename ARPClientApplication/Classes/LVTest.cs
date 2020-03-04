@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ARPClientApplication.Interface
 {
+    /// <summary>
+    /// Класс строки списка 
+    /// </summary>
     [Serializable]
     public class LVTest
     {
@@ -53,6 +56,9 @@ namespace ARPClientApplication.Interface
             }
         }
     }
+    /// <summary>
+    /// Класс содержимого списка
+    /// </summary>
     [Serializable]
     public class ListViewContent
     {
