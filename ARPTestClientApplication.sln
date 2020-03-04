@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterFaceDesigner", "..\..\..\АРМ\Коды\InterFaceDesigner\InterFaceDesigner\InterFaceDesigner\InterFaceDesigner.csproj", "{E4DD2C1C-C4C8-4DBF-9FD6-6DCFF40D4F0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPClientApplication", "ARPClientApplication\ARPClientApplication.csproj", "{677CAFB0-FE4A-41A1-8E39-D7F04B331710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASA.Communication", "..\..\..\АСА Общие классы\ASA\ASA.Communication\ASA.Communication.csproj", "{2AA92879-500A-426F-8210-F4D1B85125C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASA.Cryptography", "..\..\..\АСА Общие классы\ASA\ASA.Cryptography\ASA.Cryptography.csproj", "{BA5DE77A-2D83-468C-975D-12D63E0CEAEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPService", "..\..\АРП-Служба\Код\ARPService\ARPService\ARPService.csproj", "{457933B1-047A-4804-A7DF-0E7C9BD1AF5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPConsole", "..\..\АРП-Инструментарий\Код\ARPConsole\ARPConsole.csproj", "{B54083B9-4D06-4C32-9F93-D17FFE124236}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPServiceInterfaces", "..\..\АРП-Служба\Код\ARPServiceInterfaces\ARPServiceInterfaces\ARPServiceInterfaces.csproj", "{40FE4C0F-4C44-47D9-BCB1-0C3E3F2344B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASA.Helpers", "..\..\..\АСА Общие классы\ASA\ASA.Helpers\ASA.Helpers.csproj", "{322CBB63-FF47-4AAD-B5EA-18856318EEDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARPTestClientApplication", "ARPTestClientApplication\ARPTestClientApplication.csproj", "{8A1264A5-688C-4313-8CF2-49121B35C4BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4DD2C1C-C4C8-4DBF-9FD6-6DCFF40D4F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4DD2C1C-C4C8-4DBF-9FD6-6DCFF40D4F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4DD2C1C-C4C8-4DBF-9FD6-6DCFF40D4F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4DD2C1C-C4C8-4DBF-9FD6-6DCFF40D4F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{677CAFB0-FE4A-41A1-8E39-D7F04B331710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{677CAFB0-FE4A-41A1-8E39-D7F04B331710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{677CAFB0-FE4A-41A1-8E39-D7F04B331710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{677CAFB0-FE4A-41A1-8E39-D7F04B331710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AA92879-500A-426F-8210-F4D1B85125C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA92879-500A-426F-8210-F4D1B85125C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA92879-500A-426F-8210-F4D1B85125C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA92879-500A-426F-8210-F4D1B85125C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5DE77A-2D83-468C-975D-12D63E0CEAEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5DE77A-2D83-468C-975D-12D63E0CEAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5DE77A-2D83-468C-975D-12D63E0CEAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5DE77A-2D83-468C-975D-12D63E0CEAEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457933B1-047A-4804-A7DF-0E7C9BD1AF5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457933B1-047A-4804-A7DF-0E7C9BD1AF5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457933B1-047A-4804-A7DF-0E7C9BD1AF5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457933B1-047A-4804-A7DF-0E7C9BD1AF5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54083B9-4D06-4C32-9F93-D17FFE124236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54083B9-4D06-4C32-9F93-D17FFE124236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54083B9-4D06-4C32-9F93-D17FFE124236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54083B9-4D06-4C32-9F93-D17FFE124236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FE4C0F-4C44-47D9-BCB1-0C3E3F2344B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FE4C0F-4C44-47D9-BCB1-0C3E3F2344B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FE4C0F-4C44-47D9-BCB1-0C3E3F2344B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FE4C0F-4C44-47D9-BCB1-0C3E3F2344B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322CBB63-FF47-4AAD-B5EA-18856318EEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322CBB63-FF47-4AAD-B5EA-18856318EEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322CBB63-FF47-4AAD-B5EA-18856318EEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322CBB63-FF47-4AAD-B5EA-18856318EEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A1264A5-688C-4313-8CF2-49121B35C4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1264A5-688C-4313-8CF2-49121B35C4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A1264A5-688C-4313-8CF2-49121B35C4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A1264A5-688C-4313-8CF2-49121B35C4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {377742D2-A28C-4481-BD6A-546403563987}
+	EndGlobalSection
+EndGlobal
